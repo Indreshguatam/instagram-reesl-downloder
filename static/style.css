@@ -1,0 +1,87 @@
+/* Background gradient + animation */
+body {
+  margin: 0; padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  background: #111;
+}
+
+.background {
+  position: fixed; inset: 0;
+  background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background-size: 400% 400%;
+  animation: gradientMove 12s linear infinite;
+  filter: blur(40px) saturate(120%);
+  z-index: -2;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%;}
+  50% { background-position: 100% 50%;}
+  100% { background-position: 0% 50%;}
+}
+
+.logo-container {
+  position: fixed; top: 18px; width: 100%; display:flex; justify-content:center; z-index:3;
+}
+
+.insta-logo{ width:72px; filter:drop-shadow(0 8px 20px rgba(0,0,0,0.6)); opacity:0.95; }
+
+/* Main card */
+.card {
+  width: 94%; max-width: 520px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+h1 { margin: 0 0 6px 0; font-size: 22px; }
+.subtitle { margin-top:0; margin-bottom:16px; font-size:14px; color: rgba(255,255,255,0.9); }
+
+/* Input */
+input[type="url"] {
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 10px; border: none; outline:none;
+  font-size: 15px;
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.primary-btn, .download-btn {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px; border: none; cursor:pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(90deg, #ff7a00, #ff0069, #d600ff);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform .15s ease;
+}
+
+.primary-btn:hover, .download-btn:hover { transform: translateY(-3px); }
+
+/* Preview */
+.preview { margin-top:18px; }
+.preview video { width: 100%; border-radius: 8px; margin-bottom:12px; background:#000; }
+
+/* Flash */
+.flash-container { margin-bottom: 10px; }
+.flash.error { background: rgba(255,70,70,0.12); padding:10px; border-radius:8px; color:#fff; }
+
+/* Footer links */
+.small-footer { margin-top:12px; font-size:13px; color:rgba(255,255,255,0.85); }
+.small-footer a { color: rgba(255,255,255,0.92); text-decoration:none; margin: 0 6px; }
+
+/* Back link */
+.back { display:inline-block; margin-top:10px; color: rgba(255,255,255,0.85); text-decoration:none; font-size:14px; }

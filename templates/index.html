@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Instagram Reel Downloader</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="logo-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+         class="insta-logo" alt="Instagram">
+  </div>
+
+  <div class="card">
+    <h1>Instagram Reel Downloader</h1>
+    <p class="subtitle">Paste any Instagram  reel URL to download.</p>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-container">
+          {% for message in messages %}
+            <div class="flash error">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('index') }}">
+      <input type="url" name="video_url" placeholder="Paste Instagram reel URL" required>
+      <button type="submit" class="primary-btn">Search</button>
+    </form>
+
+    {% if preview %}
+      <div class="preview">
+        <h3>Preview</h3>
+
+        <video controls playsinline>
+          <source src="{{ media_url }}" type="video/mp4">
+        </video>
+
+        <!-- Download WITH AUDIO -->
+        <form method="POST" action="{{ url_for('download_merged') }}">
+          <input type="hidden" name="original_url" value="{{ original_url }}">
+          <button type="submit" class="download-btn">
+            Download Video (With Audio)
+          </button>
+        </form>
+
+        <a class="back" href="{{ url_for('index') }}">← Search another link</a>
+      </div>
+    {% endif %}
+    
+
+    <footer class="small-footer">
+      <a href="{{ url_for('privacy') }}">Privacy</a> ·
+      <a href="{{ url_for('terms') }}">Terms</a> ·
+      <a href="{{ url_for('dmca') }}">DMCA</a> ·
+      <a href="{{ url_for('about') }}">About</a> ·
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </footer>
+  </div>
+</body>
+</html>

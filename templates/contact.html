@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #3b3b5c);
+        color: #fff;
+        background-attachment: fixed;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        width: 100%;
+        background: rgba(0,0,0,0.35);
+        backdrop-filter: blur(6px);
+        padding: 12px 0;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .navbar a:hover {
+        color: #00eaff;
+    }
+
+    /* CONTENT BOX */
+    .page-box {
+        max-width: 900px;
+        margin: 50px auto;
+        background: rgba(255, 255, 255, 0.07);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+    }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('privacy') }}">Privacy</a>
+    <a href="{{ url_for('terms') }}">Terms</a>
+    <a href="{{ url_for('dmca') }}">DMCA</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page-box">
+
+    <h2>Contact Us</h2>
+
+    <p>Have a question or business inquiry? We’re here to help.</p>
+
+    <p>
+        📧 Email: <strong>ak4903294@gmail.com</strong><br>
+        🌐 Website: <strong>YourWebsiteURL.com</strong>
+    </p>
+
+    <p>We usually respond within 24 hours.</p>
+
+</div>
+
+</body>
+</html>

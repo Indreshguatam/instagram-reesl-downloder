@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #3b3b5c);
+        color: #fff;
+        background-attachment: fixed;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        width: 100%;
+        background: rgba(0,0,0,0.35);
+        backdrop-filter: blur(6px);
+        padding: 12px 0;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .navbar a:hover {
+        color: #00eaff;
+    }
+
+    /* CONTENT BOX */
+    .page-box {
+        max-width: 900px;
+        margin: 50px auto;
+        background: rgba(255, 255, 255, 0.07);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        margin: 25px 0;
+    }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('privacy') }}">Privacy</a>
+    <a href="{{ url_for('terms') }}">Terms</a>
+    <a href="{{ url_for('dmca') }}">DMCA</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page-box">
+
+    <h2>Terms & Conditions</h2>
+    <p><em>Last Updated: 24/11/2025</em></p>
+
+    <p>By using <strong>Your Website Name</strong>, you agree to the terms listed below.</p>
+
+    <hr>
+
+    <h3>1. Service Purpose</h3>
+    <p>
+    Our website provides tools to download publicly available Instagram content.  
+    We are NOT affiliated with Instagram or Meta Platforms.
+    </p>
+
+    <hr>
+
+    <h3>2. User Responsibility</h3>
+    <p>You agree to:</p>
+    <ul>
+        <li>Not misuse or abuse our services</li>
+        <li>Not download private or copyrighted content without permission</li>
+        <li>Follow Instagram’s Terms of Service</li>
+        <li>Use downloaded content only for personal, fair-use, or educational purposes</li>
+    </ul>
+    <p>Any misuse is the sole responsibility of the user.</p>
+
+    <hr>
+
+    <h3>3. Copyright Notice</h3>
+    <p>We DO NOT:</p>
+    <ul>
+        <li>Host copyrighted content</li>
+        <li>Store videos or images</li>
+        <li>Claim ownership of Instagram media</li>
+    </ul>
+    <p>All copyrights remain with the original creators.</p>
+
+    <hr>
+
+    <h3>4. Prohibited Activities</h3>
+    <p>Users MUST NOT:</p>
+    <ul>
+        <li>Attempt to download content from private accounts</li>
+        <li>Use the platform for illegal activities</li>
+        <li>Reverse-engineer or exploit the website</li>
+        <li>Use bots or automated tools to overload the system</li>
+    </ul>
+
+    <hr>
+
+    <h3>5. Ads & Monetization</h3>
+    <p>
+    Our website may display advertisements.  
+    Interaction with ads is strictly between you and the ad provider.
+    </p>
+
+    <hr>
+
+    <h3>6. Changes to Terms</h3>
+    <p>
+    We may update these Terms at any time without prior notice.  
+    Continued use of the site signifies acceptance of updated terms.
+    </p>
+
+    <hr>
+
+    <h3>7. Limitation of Liability</h3>
+    <p>We are NOT responsible for:</p>
+    <ul>
+        <li>User misuse of downloaded content</li>
+        <li>Data loss or corruption</li>
+        <li>Service delays or interruptions</li>
+        <li>Any actions taken against you by Instagram</li>
+    </ul>
+
+    <hr>
+
+    <h3>8. Contact</h3>
+    <p>
+    For any legal or technical issues, email us at:<br>
+    <strong>ak4903294@gmail.com</strong>
+    </p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DMCA Policy</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #3b3b5c);
+        color: #fff;
+        background-attachment: fixed;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        width: 100%;
+        background: rgba(0,0,0,0.35);
+        backdrop-filter: blur(6px);
+        padding: 12px 0;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .navbar a:hover {
+        color: #00eaff;
+    }
+
+    /* CONTENT BOX */
+    .page-box {
+        max-width: 900px;
+        margin: 50px auto;
+        background: rgba(255, 255, 255, 0.07);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        margin: 25px 0;
+    }
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('privacy') }}">Privacy</a>
+    <a href="{{ url_for('terms') }}">Terms</a>
+    <a href="{{ url_for('dmca') }}">DMCA</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page-box">
+
+    <h2>DMCA / Disclaimer</h2>
+    <p><strong>Last Updated:</strong> 24/11/2025</p>
+
+    <hr>
+
+    <h3>1. No Media Storage</h3>
+    <p>
+    This website does <strong>not host</strong> or store any copyrighted content on its servers.
+    All media is:
+    </p>
+    <ul>
+        <li>Sourced directly from Instagram's publicly available data</li>
+        <li>Owned by the respective Instagram users</li>
+    </ul>
+
+    <hr>
+
+    <h3>2. Copyright Infringement Policy</h3>
+    <p>
+    If you are a copyright owner and believe your content has been downloaded without permission, you may request removal.
+    </p>
+
+    <p><strong>Contact Email:</strong> xyz@example.com</p>
+
+    <p>Please include:</p>
+    <ul>
+        <li>Your full name</li>
+        <li>Proof of content ownership</li>
+        <li>The URL of the infringing Instagram content</li>
+    </ul>
+
+    <hr>
+
+    <h3>3. User Responsibility</h3>
+    <p>Users are fully responsible for:</p>
+    <ul>
+        <li>Using downloaded content legally</li>
+        <li>Obtaining permission from original creators</li>
+        <li>Respecting Instagram copyright rules</li>
+    </ul>
+
+    <hr>
+
+    <h3>4. Fair Use Statement</h3>
+    <p>This tool is provided for:</p>
+    <ul>
+        <li>Personal use</li>
+        <li>Educational use</li>
+        <li>Research</li>
+        <li>Archiving</li>
+    </ul>
+    <p>
+    We do <strong>not support or encourage piracy</strong> or misuse of copyrighted material.
+    </p>
+
+</div>
+
+</body>
+</html>
