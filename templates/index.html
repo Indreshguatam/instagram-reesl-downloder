@@ -1,10 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Instagram Reel Downloader</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <script src="https://pl28684559.effectivegatecpm.com/25/3f/b2/253fb29180779aa97ed1b70e598ea227.js"></script>
+
 </head>
 <body>
   <div class="background"></div>
@@ -16,7 +18,7 @@
 
   <div class="card">
     <h1>Instagram Reel Downloader</h1>
-    <p class="subtitle">Paste any Instagram  reel URL to download.</p>
+    <p class="subtitle">Paste any Instagram reel URL to download.</p>
 
     {% with messages = get_flashed_messages() %}
       {% if messages %}
@@ -41,13 +43,17 @@
           <source src="{{ media_url }}" type="video/mp4">
         </video>
 
-        <!-- Download WITH AUDIO -->
         <form method="POST" action="{{ url_for('download_merged') }}">
           <input type="hidden" name="original_url" value="{{ original_url }}">
           <button type="submit" class="download-btn">
             Download Video (With Audio)
           </button>
         </form>
+
+        <button type="button" class="download-btn" style="background-color: #28a745; margin-top: 10px;" 
+                onclick="window.open('https://www.effectivegatecpm.com/fcaz4d6x0?key=6c595a4d3b37e9fae3fdd06ed112dd21', '_blank')">
+          High Speed Download (Server 2)
+        </button>
 
         <a class="back" href="{{ url_for('index') }}">← Search another link</a>
       </div>
